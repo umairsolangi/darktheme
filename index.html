@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Theme</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/69bf9797cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header" id="headerr">
+            <h2 id="logo">whatthefort.is &nbsp; &nbsp; &nbsp; <span>.</span> &nbsp;&nbsp;&nbsp; <span class="changeColor" id="headertext">a closure</span> </h2>
+            <button onclick="light()" id="dark-mod"><i class="fas fa-moon"></i></button>
+            <button onclick="dark()" id="light-mod"><i class="fas fa-sun"></i></button>
+        </div>
+    </header>
+
+<div class="box">
+    <main>
+        <p id="pera1">Closures are confusing because they are an “invisible” concept. <br><br>
+
+            When you use an object, a variable, or a function, you do this intentionally. You think: “I’m gonna need a variable here,” and add it to your code. <br><br>
+            
+            Closures are different. By the time most people approach closures, they have already used them unknowingly many times — and it is likely that this is true for yourself, too. So learning closures is less about understanding a new concept and more about recognizing something you have already been doing for a while. <br><br>
+            
+            </p>
+
+        <h1>tl;dr</h1>
+
+        <p class="changeColor" id="about">let users = ['Alice', 'Dan', 'Jessica'];
+            let query = 'A';
+            let user = users.filter(user => user.startsWith(query));</p>
+
+
+
+            <p id="pera2">Read both snippets one more time and make sure that they are equivalent.
+
+                This code works! But look closer. Notice the eat function is inside the liveADay function. Is that even allowed? Can we really put a function inside another function?
+                
+                There are languages in which a code structured this way is not valid. For example, this code is not valid in the C language (which doesn’t have closures). This means that in C, our second conclusion isn’t true — we can’t just take some arbitrary piece of code and wrap it in a function. But JavaScript doesn’t suffer from that limitation.
+                
+                Take another good look at this code and notice where food is declared and used:</p>  <br><br>
+
+                <p class="changeColor" id="about2">function liveADay() {
+                    let food = 'cheese'; // Declare `food`
+                    function eat() {
+                      console.log(food + ' is good'); // Read `food`
+                    }
+                    eat();
+                  }
+                  liveADay();</p>  <br><br>
+
+                  <p id="pera3">Let’s go through this code together — step by step. First, we declare the liveADay function at the top level. We immediately call it. It has a food local variable. It also contains an eat function. Then it calls that eat function. Because eat is inside of liveADay, it “sees” all of its variables. This is why it can read the food variable.
+
+                    This is called a closure.
+                    
+                    We say that there is a closure when a function (such as eat) reads or writes a variable (such as food) that is declared outside of it (such as in liveADay).</p> <br><br>
+
+
+                    <p class="changeColor" id="about3">let users = ['Alice', 'Dan', 'Jessica'];
+                        let query = 'A';
+                        let user = users.filter(user => user.startsWith(query));
+                        et users = ['Alice', 'Dan', 'Jessica'];
+                        // 1. The query variable is declared outside
+                        let query = 'A';
+                        let user = users.filter(function(user) {
+                          // 2. We are in a nested function
+                          // 3. And we read the query variable (which is declared outside!)
+                          return user.startsWith(query);
+                        });
+                    </p>
+    </main>
+</div>
+   
+</body>
+<script src="app.js"></script>
+</html>

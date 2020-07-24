@@ -1,0 +1,79 @@
+.changeColor{
+color: rgb(6, 160, 207);
+}
+h2{
+    margin-left: 200px;
+    padding: 30px;
+}
+.header{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+}
+button{
+    width: 80px;
+    height: 40px;
+    margin-top: 40px;
+}
+p{
+    font-size: 22px;
+    font-family: sans-serif;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+.box{
+    /* background-color: rgb(152, 248, 152); */
+    width: 500px;
+    height: 100%;
+    margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+}
+button{
+    border-radius: 50px;
+    width: 40px;
+    border: none;
+}
+#light-mod{
+    display: none;
+}
+@media only screen and (max-width: 450px) {
+    .header {
+       position: relative;
+       left: -100px;
+    }
+  }
+@media only screen and (max-width: 414px) {
+    .header {
+       position: relative;
+       left: -100px;
+    }
+  }
+@media only screen and (max-width: 411px) {
+    .header {
+       position: relative;
+       left: -100px;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .header {
+       position: relative;
+       left: -130px;
+    }
+  }
+@media only screen and (max-width: 360px) {
+    .header {
+       position: relative;
+       left: -100px;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .header {
+       position: relative;
+       left: -150px;
+    }
+  }
